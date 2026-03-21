@@ -1,11 +1,17 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, View, Text, Button } from 'react-native';
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
+      <View>
+        <Button title="Tap me!" color="green" />
+      </View>
+      {/* Team Members (We are 5 members in the team) */}
+      <Text style={styles.textBlue}>Bona, Andrei Nycole So</Text>
+      <Text style={styles.textBlue}>Cruz, Danielle Patrick</Text>
+      <Text style={styles.textBlue}>Delavin, Katarina Nicole</Text>
+      <Text style={styles.textHex}>Guariño, Danica</Text>
+      <Text style={styles.textHex}>Santos, Andrei</Text>
     </View>
   );
 }
@@ -16,5 +22,19 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
     alignItems: 'center',
     justifyContent: 'center',
+  },
+
+  textBlue: {
+    margin: 16,
+    padding: 16,
+    borderWidth: 2,
+    borderColor: 'blue',
+  },
+
+  textHex: {
+    margin: 16,
+    padding: 16,
+    borderWidth: 2,
+    borderColor: '#003375',
   },
 });
