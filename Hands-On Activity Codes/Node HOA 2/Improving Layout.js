@@ -1,21 +1,6 @@
-import { StyleSheet, View, Text, Button, TextInput} from 'react-native';
-import {useState} from 'react';
+import { StyleSheet, View, Text, Button, TextInput } from 'react-native';
 
 export default function App() {
-  
-  const [enteredGoalText, setEnteredGoalText] = useState('');
-  
-  // The two said functions
-  // We removed the code for the goalInputHandler.
-  function goalInputHandler(enteredText) {
-    setEnteredGoalText(enteredText);
-  }
-
-  // The goal was to display the entered text when the ‘Add Goal’ button is pressed.
-  function addGoalHandler() {
-    console.log(enteredGoalText);
-  }
-
   return (
     <View style={styles.appContainer}>
       
@@ -24,9 +9,8 @@ export default function App() {
         <TextInput 
           placeholder="Your Course Goal" 
           style={styles.textInput} 
-          onChangeText={goalInputHandler}
         />
-        <Button title="Add Goal" onPress={addGoalHandler}/>
+        <Button title="Add Goal" />
       </View>
 
       {/* Second nested View */}
