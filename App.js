@@ -2,6 +2,7 @@ import { StyleSheet, View, Text, FlatList } from 'react-native';
 import { useState } from 'react';
 import GoalItem from './components/GoalItem';
 import GoalInput from './components/GoalInput';
+import Header from './components/Header';
 
 export default function App() {
   const [courseGoals, setCourseGoals] = useState([]);
@@ -16,12 +17,7 @@ export default function App() {
   return (
     <View style={styles.appContainer}>
       {/* Header */}
-      <View style={styles.header}>
-        <Text style={styles.title}>📘 My Personal Goals!</Text>
-        <Text style={styles.subtitle}>
-          Small progress each day leads to strong results over time.
-        </Text>
-      </View>
+      <Header />
 
       {/* Goal Input */}
       <GoalInput onAddGoal={addGoalHandler} />
@@ -44,28 +40,6 @@ const styles = StyleSheet.create({
     paddingTop: 70,
     paddingHorizontal: 20,
     backgroundColor: '#f5f0e6'
-  },
-  header: {
-    backgroundColor: '#fffaf3',
-    padding: 16,
-    borderRadius: 10,
-    marginBottom: 20,
-    shadowColor: '#000',
-    shadowOpacity: 0.05,
-    shadowRadius: 5,
-    elevation: 2
-  },
-
-  title: {
-    fontSize: 24,
-    fontWeight: '600',
-    color: '#4b2e2b'
-  },
-
-  subtitle: {
-    fontSize: 13,
-    color: '#7a5c4d',
-    marginTop: 4
   },
 
   goalListContainer: {
