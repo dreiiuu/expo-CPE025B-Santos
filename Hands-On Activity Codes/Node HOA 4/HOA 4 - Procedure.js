@@ -1,3 +1,6 @@
+// Note, this is the only file I used to do the proceudre part for th eHOA 4 of the Node.js
+// I amange to do experiments such as doing pressable vs button and learn more about pressables
+
 import { useState } from 'react';
 import { View, TextInput, Pressable, Text, StyleSheet } from 'react-native';
 
@@ -30,7 +33,7 @@ function GoalInput(props) {
           onLongPress={() => setIsLongPressed(true)}
           onPressOut={() => setIsLongPressed(false)}
           disabled={enteredGoalText.length === 0}
-          android_ripple={{ color: 'ccc' }}
+          android_ripple={{ color: '#ccc' }}
           style={({ pressed }) => [
             styles.button,
             pressed && styles.buttonPressed,
